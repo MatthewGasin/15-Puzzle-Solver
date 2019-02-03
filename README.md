@@ -3,16 +3,16 @@ Implementation of the A* algorithm to solve the Gem puzzle, multithreaded in C
 
   This program solves the 15 puzzle, also known as the Gem puzzle or the Game of 15 blocks. The premise of the problem is a 4x4 grid with 15 blocks and one empty slot. The challenge is to sort the blocks in order by moving them via the empty slot.
   
-    This program is one of THE most time effective solutions to this problem. A* is the most efficient way to find a solution, with other searches taking way longer to find even non-optimal solutions. The multi-threaded aspect speeds up the most computation heavy area of the program (as described below), and the efficiency of C speeds the program even more. While other solves take minutes or hours for a problem more than 100 moves away from the goal state, this program does it in under 30 seconds.
+  This program is one of THE most time effective solutions to this problem. A* is the most efficient way to find a solution, with other searches taking way longer to find even non-optimal solutions. The multi-threaded aspect speeds up the most computation heavy area of the program (as described below), and the efficiency of C speeds the program even more. While other solves take minutes or hours for a problem more than 100 moves away from the goal state, this program does it in under 30 seconds.
   
-    GenGemPuzzle.c generates the problems. The program takes one command line argument, the amount of moves that should be made on the goal state. The goal state is 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 0, or visualized:
-    
+  GenGemPuzzle.c generates the problems. The program takes one command line argument, the amount of moves that should be made on the goal state. The goal state is 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 0, or visualized: 
+  
     1  2  3  4
     5  6  7  8
     9 10 11 12
-    13 14 15 0
+    13 14 15 0 
     
-    GenGemPuzzle moves the 0 around to create a problem that can definitely be solved (as it only makes valid moves on the goal state). Simply generating the numbers randomly may result in an unsolvable problem.
+ GenGemPuzzle moves the 0 around to create a problem that can definitely be solved (as it only makes valid moves on the goal state). Simply generating the numbers randomly may result in an unsolvable problem.
 
 An example generation may be 0  5  2  4 10  1  3  6  9 14 11 12 13 15  8  7,
 
